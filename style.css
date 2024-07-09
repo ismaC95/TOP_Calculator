@@ -40,6 +40,14 @@ html{
     border-radius: 10px;
     border: 1.5px solid black;
     box-shadow: 3px 3px black;
+    display: flex;
+    align-items:center;
+    justify-content: end;
+    padding-right: 20px;
+    font-weight: bold;
+    Font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 20px;
+
 }
 
 button{
@@ -114,6 +122,11 @@ button:hover {
 .operation, #delete{
     background-color: #6D6D6D;
 }
+
+.operation{
+    font-weight: bold;
+}
+
 .operation:hover, #delete:hover{
     transform: translateY(-1px);
     background-color: black;

@@ -168,6 +168,26 @@ function deleteButton(){
     });
 }
 
+//add keyboard support
+document.addEventListener("keydown", (e) => {
+    console.log(e);
+    const buttons = document.querySelectorAll("button");
+    let key = e.key;
+    //edge buttons
+    if(key === 'Enter') key = '=';
+    if(key === '*') key = 'x';
+    if(key === 'Backspace') key = 'delete';
+    if(key === 'Escape') key = 'C'
+
+    buttons.forEach(button =>{
+        if(button.textContent === key){
+            button.click();
+        }
+        else if(key === 'delete' && button.id === 'delete') button.click();
+    })
+    
+});
+
 document.addEventListener("DOMContentLoaded", () => {
     display();
     getOperator();
